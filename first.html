@@ -29,6 +29,8 @@
        .result {
            margin-top: 20px;
        }
+
+       
    </style>
 </head>
 
@@ -50,9 +52,12 @@
             <option value="other">Other</option>
            </select>  
 
-           <button type="submit">Submit</button>
+           <div id="submit">
+            <button type="submit">Submit</button>
+           </div>
+           
        </form>
-
+       
        <div class="result" id="result"></div>
    </div>
 
@@ -72,6 +77,22 @@
                                   <p>Label: ${notes_type}</p>`;
                                   
        });
+
+       document.getElementById("title").addEventListener("focus", function() {
+        this.style.backgroundColor="#e0f7fa";
+       });
+
+       document.getElementById("title").addEventListener("blur", function() {
+        this.style.backgroundColor="";
+       });
+      
+       document.getElementById("content").addEventListener("focus", function() {
+           this.style.backgroundColor="#e0f7fa"; 
+       });
+
+       document.getElementById("content").addEventListener("blur", function() {
+        this.style.backgroundColor="";
+       })
        
    </script>
 </body>
