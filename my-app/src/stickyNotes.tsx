@@ -151,6 +151,7 @@ export const StickyNotes = () => {
                 </button>
 
                 <button
+                  data-testid = {`delete-note-${note.id}`}
                   onClick={() => deleteNoteHandler(note.id, note.title)}
                   style={{
                     background: "none",
@@ -168,6 +169,7 @@ export const StickyNotes = () => {
                 suppressContentEditableWarning={true}
                 onBlur={(event) => updateNoteHandler(event, note.id, "title")}
               >
+                
                 {note.title}
               </h2>
 
